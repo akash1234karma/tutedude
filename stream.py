@@ -1,19 +1,54 @@
-import streamlit as st
-import pandas as pd
-
-st.header("welcome to streamlit")
-
-if st.button("click me"):
-    st.write("say hi")
-
-agree=st.checkbox("i agree")
-if agree:
-    st.write("you agree")
-
-level=st.slider("select level:" , 1,10,5)
-st.write(f'select level {level}')
-
-uploaded_file=st.file_uploader("upload a file", type=["txt","csv"])
-if uploaded_file is not None:
-    df=pd.read_csv(uploaded_file)
-    st.write(df.head())
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "7c1e8d01",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "8"
+      ]
+     },
+     "execution_count": 1,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "4+4"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "2c42dc15",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "LangchainUpdated (3.12.12)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.12"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
