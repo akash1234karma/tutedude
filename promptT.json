@@ -1,17 +1,17 @@
 {
     "name": null,
-    "input_variable": [
-        "content",
+    "input_variables": [
+        "context",
         "goal",
         "role"
     ],
-    "optional_variables":[],
+    "optional_variables": [],
     "output_parser": null,
-    "partial_variables":[],
-    "metdata": null,
+    "partial_variables": {},
+    "metadata": null,
     "tags": null,
-    "template": "You are senior {role} working in the company. you always have a {goal} in mind abd you have {context}.",
+    "template": "you are a Senior {role} working in company, you always have a {goal} in mind and you have {context} ",
     "template_format": "f-string",
-    "validation_template": false,
+    "validate_template": false,
     "_type": "prompt"
 }
