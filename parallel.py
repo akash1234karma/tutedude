@@ -17,7 +17,6 @@ parser=StrOutputParser()
 #-----------------------------
 parallel_chain=RunnableParallel({'summary': prompt1 | model1 | parser, 'quiz': prompt1 | model2 | parser})
 prompt3=PromptTemplate(template='Merge the following {summary} and {quiz} together', input_variables=['summary','quiz'])
-
 #-----------------------------
 chain = prompt3 | model2 | parser
 final_chain = parallel_chain | chain 
@@ -26,8 +25,6 @@ final_chain = parallel_chain | chain
 #print(result)
 
 st.title("Simple chatbot")
-
-
 question=st.text_input("Enter your question or topic:")
 
 if question:
