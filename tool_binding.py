@@ -19,7 +19,7 @@ def Multiply(a:int, b:int) -> int:
 
 llm_with_tools=llm.bind_tools([addition,Multiply])
 messages=[]
-query=HumanMessage("Help me to add 4 and 5")
+query=HumanMessage("can you please perform product of these two numbers 4 and 6. also please add those number")
 messages.append(query)
 
 #tool calling
@@ -29,10 +29,8 @@ messages.append(AI)
 tool_call=AI.tool_calls[0]
 
 tool_message=ToolMessage(content=str(tool_call),name=tool_call['name'],tool_call_id=tool_call['id'])
-
 messages.append(tool_message)
 
 #tool exec
-
 response=llm_with_tools.invoke(messages)
 print(response.content)
