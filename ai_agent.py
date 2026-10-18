@@ -1,6 +1,4 @@
 from langchain_openai import ChatOpenAI
-from langchain_core.tools import tool
-import requests
 from langchain_community.tools import DuckDuckGoSearchRun
 from dotenv import load_dotenv
 from langchain_classic.agents import create_react_agent ,AgentExecutor
